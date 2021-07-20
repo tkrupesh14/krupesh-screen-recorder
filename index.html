@@ -1,53 +1,161 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Krupesh Vithlani's Screen Recorder</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
-</head>
-<body>
+  <head>
+    <title>Title</title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <style type="text/css">
+      body {
+          
+          -webkit-box-pack: center;
+          -webkit-justify-content: center;
+              -ms-flex-pack: center;
+                  justify-content: center;
+          -webkit-box-align: center;
+          -webkit-align-items: center;
+              -ms-flex-align: center;
+                  align-items: center;
+          height: 100%;
+          width: 100%;
+          margin: 0;
+      }
+      .holder {
+          background-color: #4c474c;
+          background-image: -webkit-gradient(linear, left bottom, left top, from(#4c474c), to(#141414));
+          background-image: -o-linear-gradient(bottom, #4c474c 0%, #141414 100%);
+          background-image: linear-gradient(0deg, #4c474c 0%, #141414 100%);
+          border-radius: 50px;
+          width: 40%;
+      }
+      [data-role="controls"] > button {
+          margin: 50px auto;
+          outline: none;
+          display: block;
+          border: none;
+          background-color: #D9AFD9;
+          background-image: -webkit-gradient(linear, left bottom, left top, from(#D9AFD9), to(#97D9E1));
+          background-image: -o-linear-gradient(bottom, #D9AFD9 0%, #97D9E1 100%);
+          background-image: linear-gradient(0deg, #D9AFD9 0%, #97D9E1 100%);
+          width: 100px;
+          height: 100px;
+          border-radius: 50%;
+          text-indent: -1000em;
+          cursor: pointer;
+          -webkit-box-shadow: 0px 5px 5px 2px rgba(0,0,0,0.3) inset, 
+              0px 0px 0px 30px #fff, 0px 0px 0px 35px #333;
+                  box-shadow: 0px 5px 5px 2px rgba(0,0,0,0.3) inset, 
+              0px 0px 0px 30px #fff, 0px 0px 0px 35px #333;
+      }
+      [data-role="controls"] > button:hover {
+          background-color: #ee7bee;
+          background-image: -webkit-gradient(linear, left bottom, left top, from(#ee7bee), to(#6fe1f5));
+          background-image: -o-linear-gradient(bottom, #ee7bee 0%, #6fe1f5 100%);
+          background-image: linear-gradient(0deg, #ee7bee 0%, #6fe1f5 100%);
+      }
+      [data-role="controls"] > button[data-recording="true"] {
+          background-color: #ff2038;
+          background-image: -webkit-gradient(linear, left bottom, left top, from(#ff2038), to(#b30003));
+          background-image: -o-linear-gradient(bottom, #ff2038 0%, #b30003 100%);
+          background-image: linear-gradient(0deg, #ff2038 0%, #b30003 100%);
+      }
+      [data-role="recordings"] > .row {
+          width: auto;
+          height: auto;
+          padding: 20px;
+      }
+      [data-role="recordings"] > .row > audio {
+          outline: none;
+      }
+      [data-role="recordings"] > .row > a {
+          display: inline-block;
+          text-align: center;
+          font-size: 20px;
+          line-height: 50px;
+          vertical-align: middle;
+          width: 50px;
+          height: 50px;
+          border-radius: 20px;
+          color: #fff;
+          font-weight: bold;
+          text-decoration: underline;
+          background-color: #0093E9;
+          background-image: -webkit-gradient(linear, left bottom, left top, from(#007BFF), to(#007BFF));
+          background-image: -o-linear-gradient(bottom, #007BFF 0%, #007BFF 100%);
+          background-image: linear-gradient(0deg, #007BFF 0%, #007BFF 100%);
+          
+          margin-left: 20px;
+          cursor: pointer;
+      }
+      [data-role="recordings"] > .row > a:hover {
+          text-decoration: none;
+      }
+      [data-role="recordings"] > .row > a:active {
+          background-image: -webkit-gradient(linear, left top, left bottom, from(#007BFF), to(#80D0C7));
+          background-image: -o-linear-gradient(top, #007BFF 0%, #007BFF 100%);
+          background-image: linear-gradient(180deg, #007BFF 0%, #007BFF 100%);
+      }
+  </style>
+  </head>
+  <body>
+<center>
+    <h1 class="text-primary">&#127909; Krupesh's Media Recorder &#127909;</h1>
+
+    <h4 class="text-success about" style="margin-top: 40px;">Hello, I am Krupesh Welcomes you to My Media Recorder&#128519;. Here You can record your Mobile/Desktop Screen&#128187;, Your Video&#127916;  and also Your audio&#127908; for FREE!!! This is my Open Source Project. So, You can contribute on my project by click here <b> <a href="https://github.com/tkrupesh14/krupesh-screen-recorder" class="text-primary" target="_blank">GitHub</a></b>&#128588; and also you can Download Source Code From Here <b> <a href="https://github.com/tkrupesh14/krupesh-screen-recorder/archive/refs/heads/main.zip" class="text-primary" target="_blank" download="">Get Source Code</a></b>&#128190;. Thank You for using this tool&#128521;. </h4>
+
+    <button id="recordScreen" class="btn btn-primary" style="margin-top: 80px;" id="recordScreen">Record Screen</button>
+    <button  id="recordCamera" class="btn btn-primary" style="margin-top: 80px;" onclick="recordc">Record Video</button>
+    <button  id="recordAudio" class="btn btn-primary" style="margin-top: 80px;" onclick="recordc">Record Audio</button></center>
     
-    <center> 
-        <h1 class="text-primary">Krupesh Vithlani's Screen Recorder</h1>
-        <button id="button" class="btn btn-primary" style="margin-top: 80px;">Click on Player To Recording</button</center><br><br>
-    <video src="" width="700" height="400" controls></video>
+    <button class="btn btn-primary "disabled id="downloadScreen">Download</button>
+    <center>  <video id="screenVideo" src="" width="700" height="400" controls style="margin-top:40px;"> </video></center>
+    <section class="cameraRecording">
+    <div class="container">
+        <video src="" playsinline autoplay muted id="gum"  width="300px" height="300px"></video>
+        <video src="" playsinline loop id="recorded" width="300px" height="300px"></video>
+    </div>
 
-    <script>
-        const btn = document.getElementById('button');
+    <div class="container">
+        <button class="btn btn-primary" id="start">Start Camera</button>
+        <button class="btn btn-primary "disabled id="record">Record</button>
+        <button class="btn btn-primary "disabled id="play">Play</button>
+        <button class="btn btn-primary "disabled id="download">Download</button>
+    </div>
 
+    <div class="container">
+        <h4>Media Stream Constraints options</h4>
+        <p>
+          Noice cancellation: <input type="checkbox" id="echoCancellation" />
+        </p>
+    </div>
 
+    <div class="container">
+        <span class="errorMsg"></span>
+    </div>
+</section>
 
-            btn.onclick = function (){
-            const start = async()=>{
+<!-- audio recording -->
+<!-- .<div class="container"> -->
+  <section class="audioRecording">
+<center>  <div class="holder">
+    <div data-role="controls">
+        <button>Record</button>
+    </div>
+   <center> <div data-role="recordings"></div></center></center>
+  
 
-                const stream = await navigator.mediaDevices.getDisplayMedia(
-                    {
-                        video: {
-                            MediaSource: "screen",
-                        }
-                    }
-                )
-                const data = [];
-                const mediaRecorder = new MediaRecorder(stream);
-                
-                mediaRecorder.ondataavailable=(e)=>{
-                    data.push(e.data);
-                }
-                mediaRecorder.start();
-                mediaRecorder.onstop=(e)=>{
-                    document.querySelector("video").src=URL.createObjectURL(
-                        new Blob(data,{
-                            type:data[0].type
-                        })
-                    )
-                }
-            }
-        
-            start();
-            }
-            document.querySelector("video").style.display='block';
-    </script>
+</section>
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+    <script type="text/javascript" src="https://code.jquery.com/jquery.min.js"></script>
+    <script src="https://stephino.github.io/dist/recorder.js"></script>
+
 </body>
+<script src="script.js"></script>
 </html>
